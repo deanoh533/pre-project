@@ -1,10 +1,11 @@
 /**
-* Answer 작성
-*
-* @author dean
-* @version 1.0.0
-* 작성일 2022/08/29
-**/package com.stackoverflow.answer.entitiy;
+ * Comment 작성
+ *
+ * @author dean
+ * @version 1.0.0
+ * 작성일 2022/08/30
+ **/
+package com.stackoverflow.comment.entity;
 
 import com.stackoverflow.audit.Auditable;
 import lombok.Getter;
@@ -17,21 +18,18 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-public class Answer extends Auditable {
+public class Comment extends Auditable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long answerId;
-
-    @Column(nullable = false, updatable = true, unique = false)
-    private String subject;
+    private long commentId;
 
     @Column(nullable = false, updatable = true, unique = false)
     private String context;
 
-    @Column(nullable = true)
-    private long viewCount;
-
     // adoptedId, memberId 상세 내용 다시보기
+    @Column(nullable = false)
+    private long questionId;
+
     @Column(nullable = true, updatable = true, unique = false)
     private long adoptedId;
 

@@ -8,7 +8,7 @@
 package com.stackoverflow.answer.mapper;
 
 import com.stackoverflow.answer.dto.AnswerDto;
-import com.stackoverflow.answer.entitiy.Answer;
+import com.stackoverflow.answer.entity.Answer;
 import org.mapstruct.Mapper;
 
 import java.util.List;

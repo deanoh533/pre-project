@@ -7,7 +7,7 @@
 **/
 package com.stackoverflow.question.service;
 
-import com.stackoverflow.question.entitiy.Question;
+import com.stackoverflow.question.entity.Question;
 import com.stackoverflow.question.repository.QuestionRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

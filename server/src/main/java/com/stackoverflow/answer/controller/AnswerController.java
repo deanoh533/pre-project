@@ -11,7 +11,7 @@ package com.stackoverflow.answer.controller;
 import com.stackoverflow.dto.MultiResponseDto;
 import com.stackoverflow.dto.SingleResponseDto;
 import com.stackoverflow.answer.dto.AnswerDto;
-import com.stackoverflow.answer.entitiy.Answer;
+import com.stackoverflow.answer.entity.Answer;
 import com.stackoverflow.answer.mapper.AnswerMapper;
 import com.stackoverflow.answer.service.AnswerService;
 import org.springframework.data.domain.Page;
@@ -71,7 +71,7 @@ public class AnswerController {
 
 
     /**
-     * gtAnswer 구현
+     * getAnswer 구현
      * singleResponseDto 구현 기능 추가 예정.  - complete
     **/
     @GetMapping("/{answer-id}")

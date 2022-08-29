@@ -11,7 +11,7 @@ package com.stackoverflow.question.controller;
 import com.stackoverflow.dto.MultiResponseDto;
 import com.stackoverflow.dto.SingleResponseDto;
 import com.stackoverflow.question.dto.QuestionDto;
-import com.stackoverflow.question.entitiy.Question;
+import com.stackoverflow.question.entity.Question;
 import com.stackoverflow.question.mapper.QuestionMapper;
 import com.stackoverflow.question.service.QuestionService;
 import org.springframework.data.domain.Page;
@@ -71,7 +71,7 @@ public class QuestionController {
 
 
     /**
-     * gtQuestion 구현
+     * getQuestion 구현
      * singleResponseDto 구현 기능 추가 예정.  - complete
     **/
     @GetMapping("/{question-id}")

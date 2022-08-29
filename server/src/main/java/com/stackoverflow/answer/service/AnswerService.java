@@ -1,5 +1,5 @@
 /**
-* AnswerService 작성
+* AnswerService 구현
 *
 * @author dean
 * @version 1.0.0
@@ -7,7 +7,7 @@
 **/
 package com.stackoverflow.answer.service;
 
-import com.stackoverflow.answer.entitiy.Answer;
+import com.stackoverflow.answer.entity.Answer;
 import com.stackoverflow.answer.repository.AnswerRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -18,6 +18,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
+
 
 @Transactional
 @Service
@@ -45,11 +46,8 @@ public class AnswerService {
     public Answer updateAnswer(Answer answer) {
         Answer findAnswer = findVerifiedAnswer(answer.getAnswerId());
 
-        //Answer findAnswer = new Answer(1L);
-        Optional.ofNullable(answer.getSubject())
-                .ifPresent(subject -> findAnswer.setSubject(subject));
         Optional.ofNullable(answer.getContext())
-                .ifPresent(context -> findAnswer.setSubject(context));
+                .ifPresent(context -> findAnswer.setContext(context));
 
         return answerRepository.save(findAnswer);
     }
@@ -93,7 +91,8 @@ public class AnswerService {
     }
 
     /**
-    * verifyExistsAnswerId 구현
+    * verifyExistsAnswerId 구현 - complete
+     * - 기준이 id일지 고민 필요
      * error exception 추가 필요
     **/
     private void verifyExistsAnswerId(long answerId) throws Exception {

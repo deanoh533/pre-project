@@ -1,7 +1,7 @@
 package com.stackoverflow.question.mapper;
 
 import com.stackoverflow.question.dto.QuestionDto;
-import com.stackoverflow.question.entitiy.Question;
+import com.stackoverflow.question.entity.Question;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-08-29T17:47:29+0900",
+    date = "2022-08-30T00:12:39+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 11.0.15 (Azul Systems, Inc.)"
 )
 @Component

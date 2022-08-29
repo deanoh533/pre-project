@@ -1,22 +1,22 @@
 /**
-* AnswerDto 작성
-*
-* @author dean
-* @version 1.0.0
-* 작성일 2022/08/29
-**/
-package com.stackoverflow.answer.dto;
+ * CommentDto 작성
+ *
+ * @author dean
+ * @version 1.0.0
+ * 작성일 2022/08/30
+ **/
+package com.stackoverflow.comment.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.lang.Nullable;
 
 
-public class AnswerDto {
+public class CommentDto {
     @Getter
     public static class post{
 
-        private long answerId;
+        private long commentId;
 
         @Nullable
         private String context;
@@ -27,7 +27,7 @@ public class AnswerDto {
     @Getter
     public static class patch{
 
-        private long answerId;
+        private long commentId;
 
         @Nullable
         private String context;
@@ -35,8 +35,8 @@ public class AnswerDto {
         private long memberId;
 
 
-        public void setAnswerId(long answerId) {
-            this.answerId = answerId;
+        public void setCommentId(long commentId) {
+            this.commentId = commentId;
         }
     }
 
@@ -44,7 +44,7 @@ public class AnswerDto {
     @Getter
     public static class response{
 
-        private long answerId;
+        private long commentId;
 
         @Nullable
         private String context;

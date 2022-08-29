@@ -1,7 +1,7 @@
 package com.stackoverflow.answer.mapper;
 
 import com.stackoverflow.answer.dto.AnswerDto;
-import com.stackoverflow.answer.entitiy.Answer;
+import com.stackoverflow.answer.entity.Answer;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-08-29T18:45:56+0900",
+    date = "2022-08-30T00:12:39+0900",
     comments = "version: 1.5.1.Final, compiler: javac, environment: Java 11.0.15 (Azul Systems, Inc.)"
 )
 @Component
@@ -24,10 +24,7 @@ public class AnswerMapperImpl implements AnswerMapper {
         Answer answer = new Answer();
 
         answer.setAnswerId( requestBody.getAnswerId() );
-        answer.setSubject( requestBody.getSubject() );
         answer.setContext( requestBody.getContext() );
-        answer.setViewCount( requestBody.getViewCount() );
-        answer.setAdoptedId( requestBody.getAdoptedId() );
         answer.setMemberId( requestBody.getMemberId() );
 
         return answer;
@@ -42,10 +39,7 @@ public class AnswerMapperImpl implements AnswerMapper {
         Answer answer = new Answer();
 
         answer.setAnswerId( requestBody.getAnswerId() );
-        answer.setSubject( requestBody.getSubject() );
         answer.setContext( requestBody.getContext() );
-        answer.setViewCount( requestBody.getViewCount() );
-        answer.setAdoptedId( requestBody.getAdoptedId() );
         answer.setMemberId( requestBody.getMemberId() );
 
         return answer;
@@ -58,20 +52,14 @@ public class AnswerMapperImpl implements AnswerMapper {
         }
 
         long answerId = 0L;
-        String subject = null;
         String context = null;
-        long viewCount = 0L;
-        long adoptedId = 0L;
         long memberId = 0L;
 
         answerId = answer.getAnswerId();
-        subject = answer.getSubject();
         context = answer.getContext();
-        viewCount = answer.getViewCount();
-        adoptedId = answer.getAdoptedId();
         memberId = answer.getMemberId();
 
-        AnswerDto.response response = new AnswerDto.response( answerId, subject, context, viewCount, adoptedId, memberId );
+        AnswerDto.response response = new AnswerDto.response( answerId, context, memberId );
 
         return response;
     }

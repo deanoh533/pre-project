@@ -8,7 +8,7 @@
 package com.stackoverflow.question.mapper;
 
 import com.stackoverflow.question.dto.QuestionDto;
-import com.stackoverflow.question.entitiy.Question;
+import com.stackoverflow.question.entity.Question;
 import org.mapstruct.Mapper;
 
 import java.util.List;
